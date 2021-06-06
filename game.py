@@ -1,5 +1,6 @@
 ﻿import pygame
 import os
+from time import sleep
 
 class Game():
 	def __init__(self, board, screenSize):
@@ -22,6 +23,11 @@ class Game():
 					self.handleClick(position, rightClick)
 			self.draw()
 			pygame.display.flip()
+			if (self.board.getWon()):
+				sound = pygame.mixer.Sound("win.wav")
+				sound.play()
+				sleep(3)
+				running = False
 		pygame.QUIT()
 
 	def draw(self):
@@ -52,6 +58,8 @@ class Game():
 		return self.images[string]
 
 	def handleClick(self, position, rightClick):
+		if (self.board.getLost()):
+			return
 		index = position[1] // self.pieceSize[1], position[0] // self.pieceSize[0]
 		piece = self.board.getPiece(index)
 		self.board.handleClick(piece, rightClick)

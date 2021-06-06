@@ -66,7 +66,7 @@ class Board():
                 self.handleClick(neighbor, False)
 
     def getLost(self):
-        self.lost
+        return self.lost
 
     def getWon(self):
         return self.numNonBombs == self.numClicked
