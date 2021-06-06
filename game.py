@@ -1,4 +1,4 @@
-import pygame
+﻿import pygame
 
 class Game():
 	def __init__(self, board, screenSize):
@@ -13,5 +13,9 @@ class Game():
 			for event in pygame.event.get():
 				if (event.type == pygame.QUIT):
 					running = False
+			self.draw()
 			pygame.display.flip()
 		pygame.QUIT()
+
+	def draw(self):
+		pass
