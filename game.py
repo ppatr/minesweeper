@@ -41,5 +41,5 @@ class Game():
 
 	def getImage(self, piece):
 		string = None
-		string = "unclicked-bomb" if piece.getHasBomb() else "empty-block"
+		string = "unclicked-bomb" if piece.getHasBomb() else str(piece.getNumAround())
 		return self.images[string]
