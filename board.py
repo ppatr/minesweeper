@@ -6,6 +6,7 @@
     def setBoard(self):
         self.board = []
         for row in range(self.size[0]):
+            row = []
             for col in range(self.size[1]):
                 piece = None
                 row.append(piece)

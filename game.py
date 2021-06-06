@@ -24,7 +24,7 @@ class Game():
 		topLeft = (0, 0)
 		for row in range(self.board.getSize() [0]):
 			for col in range(self.board.getSize()[1]):
-				iamge = self.images["empty-block"]
+				image = self.images["empty-block"]
 				self.screen.blit(image, topLeft)
 				topLeft = topLeft[0] + self.pieceSize[0], topLeft[1]
 			topLeft = 0, topLeft[1] + self.pieceSize[1]
