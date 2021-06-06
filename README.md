@@ -1,7 +1,7 @@
 # minesweeper
 A clone of Minesweeper coded with python (pygame)               
 
-EN: Run main.py to start the Minesweeper game
+EN: Run main.py to start the Minesweeper game                                                  
 DE: Zum Start des Minesweeper-Spiels main.py ausführen
                                                               
                                                                               
