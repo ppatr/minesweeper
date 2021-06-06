@@ -10,3 +10,6 @@
                 piece = None
                 row.append(piece)
             self.board.append(row)
+
+    def getSize(self):
+        return self.size
