@@ -61,7 +61,7 @@ class Board():
         self.numClicked += 1
         if (piece.getNumAround() != 0):
             return
-        for neighbor in piece.getListOfNeighbors():
+        for neighbor in piece.getNeighbors():
             if (not neighbor.getHasBomb() and not neighbor.getClicked()):
                 self.handleClick(neighbor, False)
 
