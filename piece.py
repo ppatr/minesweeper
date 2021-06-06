@@ -8,7 +8,7 @@
         return self.hasBomb
 
     def getClicked(self):
-        return self.clikced
+        return self.clicked
 
     def getFlagged(self):
         return self.flagged
