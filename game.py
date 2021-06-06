@@ -17,6 +17,9 @@ class Game():
 			for event in pygame.event.get():
 				if (event.type == pygame.QUIT):
 					running = False
+				if (event.type == pygame.KEYDOWN):
+					if (event.key == pygame.K_q):
+						running = False
 				if (event.type == pygame.MOUSEBUTTONDOWN):
 					position = pygame.mouse.get_pos()
 					rightClick = pygame.mouse.get_pressed()[2]
@@ -28,6 +31,10 @@ class Game():
 				sound.play()
 				sleep(3)
 				running = False
+#				if (input("Willst du noch eine Runde Spielen? Ja/Nein") == "Ja"):
+#					os.execv(sys.argv[0], sys.argv)
+#				else:
+#					running = False
 		pygame.QUIT()
 
 	def draw(self):
